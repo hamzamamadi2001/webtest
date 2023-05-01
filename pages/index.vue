@@ -24,7 +24,7 @@
     
     <div v-for="p in prod">
         
-    <Card :id="p.id" :title="p.title" :price="p.price" :category="p.category" :description="p.description" :image="p.image"/>
+    <ProductCard :id="p.id" :title="p.title" :price="p.price" :category="p.category" :description="p.description" :image="p.image"/>
     </div> 
 
 
@@ -41,7 +41,7 @@
 
 <script setup>
 const config = useRuntimeConfig()
-const {data: prod} = await useFetch('https://fakestoreapi.com/products',{server:false})
+const {data: prod} = await useFetch('https://fakestoreapi.com/products?limit=8',{server:false})
 
 </script>
 
