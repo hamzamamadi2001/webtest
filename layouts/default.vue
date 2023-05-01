@@ -1,6 +1,7 @@
-<template>
+<template  #fallback>
       <!-- Header Navbar -->
-<nav class="fixed top-0 left-0 z-20 w-full border-b border-gray-200 bg-white py-2.5 px-6 sm:px-4">
+      <ClientOnly>  
+<nav  class="fixed top-0 left-0 z-20 w-full border-b border-gray-200 bg-white py-2.5 px-6 sm:px-4">
   <div class="container mx-auto flex max-w-6xl flex-wrap items-center justify-between">
     <a href="#" class="flex items-center">
       
@@ -30,7 +31,9 @@
     </div>
   </div>
 </nav>
+ 
 <slot/>
+ 
 <!-- Footer -->
 <footer class="py-6  bg-gray-200 text-gray-900">
 	<div class="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
@@ -65,6 +68,7 @@
 		</div>
 	</div>
 </footer>
+</ClientOnly>
 </template>
 
 <style scoped>
